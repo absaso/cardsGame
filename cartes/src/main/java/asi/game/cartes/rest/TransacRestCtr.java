@@ -25,7 +25,7 @@ public class TransacRestCtr {
 	
 	//On récupère la somme restante au joueur
 	//En fonction de son argent restant, l'utilisateur peut ou non acheter une carte
-	@RequestMapping("/users/{name}/{idcard}") 
+	@RequestMapping("/buy/{name}/{idcard}") 
 	public void checkMoney(@PathVariable String name, int idcard) {
 		User u = userService.getUser(String.valueOf(name));
 		Card card = cardService.getCard(Integer.valueOf(idcard));
@@ -38,7 +38,12 @@ public class TransacRestCtr {
 		}
 	}
 
-		
+	@RequestMapping("/sell/{name}/{idcard}") 
+	public void sellCard(@PathVariable String name, int idcard) {
+		User u = userService.getUser(String.valueOf(name));
+		Card card = cardService.getCard(Integer.valueOf(idcard));
+		transacService.SellCard(u, card);
+	}
 	
 	
 	
