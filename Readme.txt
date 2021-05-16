@@ -7,9 +7,7 @@ Equipe 7 : AZZOUZI Mouna
 
 Lien Github du projet : https://github.com/absaso/cardsGame.git
 
-Cahier des charges
-
-Le but de cette attelier2 était de :
+Le but de cet attelier2 était de :
         - Création d'utilisateur et des connexions
         - Achat/ vente de cartes ur la plateforme 
  On souhaite obtenir une authentification dans un premier temps sommaire respectant les standars FULL REST.
@@ -17,7 +15,7 @@ Le but de cette attelier2 était de :
 
 Eléments réalisés :
 -Création d'un utilisateur: Nous avons procédé à  l'ajout d'utilisateur grace à Postam sans passer par le Front-End. Nous consacrerons du temps à l'aspect Front plus tard dans le projet . 
-Après avoir défini crée model user, nous avons fait appel aux méthodes POST pour l'ajout des utilisateurs et GET pour visualiser les utilisateurs. 
+Après avoir  crée un model user, nous avons fait appel aux méthodes POST pour l'ajout des utilisateurs et GET pour visualiser les utilisateurs. 
 
 -Achat /vente de carte :
 
