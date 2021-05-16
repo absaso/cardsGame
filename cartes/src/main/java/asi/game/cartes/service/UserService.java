@@ -17,14 +17,23 @@ import asi.game.cartes.repository.UserRepository;
 public class UserService {
 	
 	@Autowired
-	private UserRepository userRepository;
-	//private CardService cardService;
-	//private TransacService transacService;
+	UserRepository userRepository;
+	private CardService cardService;
+	private TransacService transacService;
 	
+	/*
 	//En attendant d'avoir une BDD on met les utilisateurs dans une liste
 	private List<User> users = new ArrayList <>(Arrays.asList(
 			  new User(01, "player1", 12.50, "mymail@hotmail.fr", "private123")
 			  ));
+	*/
+	
+	//Ajout d'un nouvel utilisateur dans la BDD
+	public void addUser (User user) {
+		User createdUser = userRepository.save(user);
+		//System.out.println(createdUser);
+		System.out.println("User created");
+	}
 
 	//Gestion de la connexion
 	public User getUser(String name) {
@@ -36,20 +45,22 @@ public class UserService {
 		}
 
 	}
-	
+	/*
 	//Afficher tous les utilisateurs 
 	public List<User> getUsers() {
+		User person = new User(25, "payer",12,"my@gmail.com","private");
+		users.add(person);
 		return users;
 	}
 	
 	
-	//Création d'utilisateur : on l'ajoute à la liste
+	//CrÃ©ation d'utilisateur : on l'ajoute Ã  la liste
 	public void newUser(User user) {
 		users.add(user);
 		
 	}
+	*/
 
 	
-	
-	
+
 }
