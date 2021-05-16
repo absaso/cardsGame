@@ -5,7 +5,7 @@ Equipe 7 : AZZOUZI Mouna
            TOUATI Maëlle
            YEMELE Ivana
 
-Eléments réalisés : Création d'un utilisateur 
+Eléments réalisés : Création d'un utilisateur; achat de carte
 
 Eléments non réalisés :
 
