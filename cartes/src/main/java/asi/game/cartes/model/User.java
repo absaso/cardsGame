@@ -1,6 +1,7 @@
 package asi.game.cartes.model;
 
 import java.io.Serializable;
+import javax.persistence.*;
 
 
 import javax.persistence.Entity;
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 @Entity
 public class User implements Serializable {
 	@Id
-	@GeneratedValue
+	@GeneratedValue (strategy = GenerationType.TABLE)
 	private int id;
 	private double money;
 	private String name;
