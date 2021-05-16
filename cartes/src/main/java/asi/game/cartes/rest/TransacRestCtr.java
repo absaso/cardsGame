@@ -31,7 +31,7 @@ public class TransacRestCtr {
 		Card card = cardService.getCard(Integer.valueOf(idcard));
 		double umoney = u.getMoney();
 		if (umoney >= card.getPrice()) {
-			transacService.buyCard(name,idcard);
+			transacService.buyCard(u,card);
 		}
 		else {
 			System.out.println("You don't have enough money to buy this card!");
