@@ -11,7 +11,6 @@ public class CardService {
 	@Autowired
 	private CardRepository cardRepository;
 	private UserService userService;
-	
-	//test du git
+
 	
 }
