@@ -15,7 +15,7 @@ public class TransacService {
 	@Autowired
 	private CardService cardService;
 
-	//Le joeur peut achète sa carte
+	//Le joeur peut acheter sa carte
 	public void buyCard(User u, Card card) {
 		double usrmoney = u.getMoney();
 		double cardprice = card.getPrice();

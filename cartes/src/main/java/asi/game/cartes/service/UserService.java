@@ -31,6 +31,8 @@ public class UserService {
 			  new User(01, "player1", 12.50, "mymail@hotmail.fr", "private123")
 			  ));
 	*/
+
+	
 	
 	//Ajout d'un nouvel utilisateur dans la BDD
 	public void addUser (User user) {
