@@ -2,14 +2,17 @@ package asi.game.cartes.model;
 
 import java.io.Serializable;
 
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
-public class User  {
-	
+public class User implements Serializable {
+	@Id
+	@GeneratedValue
 	private int id;
 	private double money;
 	private String name;

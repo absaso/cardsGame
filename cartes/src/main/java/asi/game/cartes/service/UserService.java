@@ -27,14 +27,13 @@ public class UserService {
 			  ));
 
 	//Gestion de la connexion
-	public User getUser(String name, String mdp) {
-		/*Optional<User> userOpt = userRepository.findByLog(name, mdp);
+	public User getUser(String name) {
+		Optional<User> userOpt = userRepository.findByName(name);
 		if (userOpt.isPresent()) {
 			return userOpt.get();
 		}else {
 			return null;
-		}*/
-		return null;
+		}
 
 	}
 	

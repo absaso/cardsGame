@@ -12,8 +12,8 @@ public class AuthService {
 	@Autowired
 	private UserService userService;
 	
-	public void login (String name,String mdp) {
-		User user = userService.getUser(name,mdp);
+	public void login (String name) {
+		User user = userService.getUser(name);
 		int id = user.getId();
 	}
 }

@@ -12,6 +12,6 @@ import asi.game.cartes.model.User;
 @Repository
 public interface UserRepository extends CrudRepository<User, Integer> {
 
-	public Optional<User> findByLog(String name, String mdp);
+	public Optional<User> findByName(String name);
 
 }

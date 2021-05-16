@@ -3,13 +3,15 @@ package asi.game.cartes.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
-public class Card {
-	
+public class Card implements Serializable{
+	@Id
+	@GeneratedValue
 	private int price;
 	private int valueCard;
 	private int id;
