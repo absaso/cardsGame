@@ -16,7 +16,7 @@ import asi.game.cartes.service.UserService;
 public class UserRestCtr {
 
 	@Autowired
-	UserService userService;
+	private UserService userService;
 	
 	//CrÃ©ation d'un utilisateur
 	@RequestMapping(method=RequestMethod.POST, value="/newuser")
@@ -24,18 +24,19 @@ public class UserRestCtr {
 		userService.addUser(user);
 	}
 	
-	//Affichage d'utilisateur par leurs nom 
+	//Affichage d'utilisateur à partir du nom 
 	@RequestMapping("/users/{name}") 
 	public User getUser(@PathVariable String name) {
 		User u = userService.getUser(String.valueOf(name));
 		return u;
-	}
-		
 	}
 	
 	/*
 	public List<User> getAllUsers() {
 		  return userService.getUsers();
 		  }
-    */
+    */	
+}
+	
+	
 

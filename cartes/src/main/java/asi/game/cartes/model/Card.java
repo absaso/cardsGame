@@ -12,20 +12,20 @@ import javax.persistence.Table;
 public class Card implements Serializable{
 	@Id
 	@GeneratedValue
-	private int price;
+	private double price;
 	private int valueCard;
 	private int id;
 	
 	
 	
-	public Card(int price, int valueCard, int id) {
+	public Card(double price, int valueCard, int id) {
 		super();
 		this.price = price;
 		this.valueCard = valueCard;
 		this.id = id;
 	}
 	
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 	

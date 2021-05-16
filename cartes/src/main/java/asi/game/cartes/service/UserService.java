@@ -17,8 +17,12 @@ import asi.game.cartes.repository.UserRepository;
 public class UserService {
 	
 	@Autowired
-	UserRepository userRepository;
+	private UserRepository userRepository;
+	
+	@Autowired
 	private CardService cardService;
+	
+	@Autowired
 	private TransacService transacService;
 	
 	/*
@@ -35,7 +39,7 @@ public class UserService {
 		System.out.println("User created");
 	}
 
-	//Gestion de la connexion
+	//Récupération d'un utilisateur spécifique
 	public User getUser(String name) {
 		Optional<User> userOpt = userRepository.findByName(name);
 		if (userOpt.isPresent()) {
@@ -45,6 +49,7 @@ public class UserService {
 		}
 
 	}
+	
 	/*
 	//Afficher tous les utilisateurs 
 	public List<User> getUsers() {
