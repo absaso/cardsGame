@@ -17,7 +17,9 @@ Eléments réalisés :
 -Création d'un utilisateur: Nous avons procédé à  l'ajout d'utilisateur grace à Postam sans passer par le Front-End. Nous consacrerons du temps à l'aspect Front plus tard dans le projet . 
 Après avoir  crée un model user, nous avons fait appel aux méthodes POST pour l'ajout des utilisateurs et GET pour visualiser les utilisateurs. 
 
--Achat /vente de carte :
+-Achat /vente de carte :L'achat et la vente de cartes se fait à travers une transaction. Pour l'achat, le controleur de transaction vérifie l'argent que possède le joueur et en fonction de ça
+il peut réaliser un achat. En ce qui concerne la vente, elle se fait une fois que les informations concernant la carte et le joueur sont récupérées.
+
 
 Eléments non réalisés :
 -connexion utilisateur
