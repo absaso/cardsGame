@@ -28,4 +28,15 @@ public class TransacService {
 		
 	}
 
+	public void SellCard(User u, Card card) {
+		double usrmoney = u.getMoney();
+		double cardprice = card.getPrice();
+		//on réalise la transaction
+		double vente = usrmoney + cardprice;
+		
+		//on met à jour la somme d'argent du joueur
+		u.setMoney(vente);	
+		
+	}
+
 }
