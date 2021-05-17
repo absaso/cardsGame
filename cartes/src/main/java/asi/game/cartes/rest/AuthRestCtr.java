@@ -16,9 +16,9 @@ public class AuthRestCtr {
 	private AuthService authService;
 	
 		//Connexion d'un utilisateur 
-		@RequestMapping("/connect/{name}/{surname}/{mdp}")
-		public int logIn(@PathVariable String name, @PathVariable String surname, @PathVariable String mdp) {
-			int id = authService.login(name,surname,mdp);
+		@RequestMapping("/connect/{name}/{mdp}")
+		public int logIn(@PathVariable String name, @PathVariable String mdp) {
+			int id = authService.login(name,mdp);
 			return id;
 		}
 }

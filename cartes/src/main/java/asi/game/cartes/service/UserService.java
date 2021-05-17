@@ -58,8 +58,8 @@ public class UserService {
 		
 	}
 
-	public User getConnected(String name, String surname, String mdp) {
-		Optional<User> userOpt = userRepository.findByNameAndSurnameAndMdp(name,surname,mdp);
+	public User getConnected(String name, String mdp) {
+		Optional<User> userOpt = userRepository.findByNameAndMdp(name,mdp);
 		if (userOpt.isPresent()) {
 			System.out.println("Connected");
 			return userOpt.get();

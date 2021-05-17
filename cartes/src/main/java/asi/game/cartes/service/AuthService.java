@@ -13,9 +13,9 @@ public class AuthService {
 	private UserService userService;
 	
 	//Gestion de la connexion de l'utilisateur
-	public int login(String name, String surname, String mdp) {
+	public int login(String name, String mdp) {
 		//On récupère les information de l'utilisateur puis on vérifie si elles sont correctes
-		User user = userService.getConnected(name,surname,mdp);
+		User user = userService.getConnected(name,mdp);
 		int id = user.getId();
 		return id;
 		
