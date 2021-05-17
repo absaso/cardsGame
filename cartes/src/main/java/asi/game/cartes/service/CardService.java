@@ -22,7 +22,7 @@ public class CardService {
 	private UserService userService;
 	
 	//Recuperation d'une carte specifique à partir dde son id
-	public Card getCard(int id) {
+	public Card getCard(Integer id) {
 		Optional<Card> cardOpt = cardRepository.findById(id);
 		if (cardOpt.isPresent()) {
 			return cardOpt.get();

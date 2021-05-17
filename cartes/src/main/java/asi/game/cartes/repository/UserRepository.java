@@ -14,4 +14,6 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 
 	public Optional<User> findByName(String name);
 
+	public Optional<User> findByNameAndSurnameAndMdp(String name, String surname, String mdp);
+
 }

@@ -12,17 +12,20 @@ import javax.persistence.Table;
 @Entity
 public class Card implements Serializable{
 	@Id
-	@GeneratedValue (strategy = GenerationType.TABLE)
+	@GeneratedValue (strategy = GenerationType.AUTO)
 	private int id;
+	private String name;
 	private double price;
-	private int valueCard;
+	private int valueCard; //valeur de la carte dans le jeu : 1 2 3 (-importante à +importante)
 	
 	
-	
-	
-	public Card(int id, double price, int valueCard) {
+	public Card() {
 		super();
+	}
+	
+	public Card(int id, String name, double price, int valueCard) {
 		this.id = id;
+		this.name = name;
 		this.price = price;
 		this.valueCard = valueCard;
 		
@@ -32,7 +35,7 @@ public class Card implements Serializable{
 		return price;
 	}
 	
-	public void setPrice(int price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	
@@ -52,6 +55,16 @@ public class Card implements Serializable{
 		this.id = id;
 	}
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
+
 	
 	
 }

@@ -13,20 +13,20 @@ import javax.persistence.Table;
 @Entity
 public class User implements Serializable {
 	@Id
-	@GeneratedValue (strategy = GenerationType.TABLE)
+	@GeneratedValue (strategy = GenerationType.AUTO)
 	private int id;
-	private double money;
 	private String name;
-	private String mail;
+	private String surname;
 	private String mdp;
+	private double money;
 	
 	
-	public User(int id, String name, double money, String mail, String mdp) {
+	public User(int id, String name,String surname,String mdp, double money) {
 		this.id = id;
 		this.name = name;
-		this.money = money;
-		this.mail = mail;
+		this.surname = surname;
 		this.mdp = mdp;
+		this.money = money;
 		
 	}
 	
@@ -60,12 +60,12 @@ public class User implements Serializable {
 		this.money = money;
 	}
 	
-	public String getMail() {
-		return mail;
+	public String getSurname() {
+		return surname;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
 	public String getMdp() {

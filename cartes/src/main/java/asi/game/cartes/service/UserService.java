@@ -52,6 +52,24 @@ public class UserService {
 
 	}
 	
+	//maj du porte-monnaie du joueur dans la bdd
+	public void updateMoney(User u) {
+		userRepository.save(u);
+		
+	}
+
+	public User getConnected(String name, String surname, String mdp) {
+		Optional<User> userOpt = userRepository.findByNameAndSurnameAndMdp(name,surname,mdp);
+		if (userOpt.isPresent()) {
+			System.out.println("Connected");
+			return userOpt.get();
+		}else {
+			System.out.println("You've entered wrong informations, try again");
+			return null;
+		}
+
+	}
+	
 	/*
 	//Afficher tous les utilisateurs 
 	public List<User> getUsers() {
