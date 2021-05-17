@@ -20,8 +20,9 @@ public class CardService {
 	
 	@Autowired
 	private UserService userService;
-
-	public Card getCard(@PathVariable int id) {
+	
+	//Recuperation d'une carte specifique à partir dde son id
+	public Card getCard(int id) {
 		Optional<Card> cardOpt = cardRepository.findById(id);
 		if (cardOpt.isPresent()) {
 			return cardOpt.get();
@@ -29,6 +30,12 @@ public class CardService {
 			return null;
 		}
 		
+	}
+	
+	//Creation d'une nouvelle carte
+	public void createCard (Card card) {
+		Card newCard = cardRepository.save(card);
+		System.out.println("Card created");
 	}
 
 	

@@ -18,7 +18,7 @@ public class UserRestCtr {
 	@Autowired
 	private UserService userService;
 	
-	//CrÃ©ation d'un utilisateur
+	//Creation d'un utilisateur
 	@RequestMapping(method=RequestMethod.POST, value="/newuser")
 	public void addUser(@RequestBody User user) {
 		userService.addUser(user);
