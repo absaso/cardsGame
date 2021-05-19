@@ -25,9 +25,9 @@ public class UserRestCtr {
 	}
 	
 	//Affichage d'utilisateur à partir du nom 
-	@RequestMapping("/users/{name}") 
-	public User getUser(@PathVariable String name) {
-		User u = userService.getUser(name);
+	@RequestMapping("/users/{iduser}") 
+	public User getUser(@PathVariable Integer iduser) {
+		User u = userService.getUser(iduser);
 		return u;
 	}
 	
