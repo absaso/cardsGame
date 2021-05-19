@@ -2,10 +2,12 @@ package asi.game.cartes.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import asi.game.cartes.dto.LoginDTO;
 import asi.game.cartes.service.AuthService;
 
 
@@ -16,9 +18,9 @@ public class AuthRestCtr {
 	private AuthService authService;
 	
 		//Connexion d'un utilisateur 
-		@RequestMapping("/connect/{name}/{mdp}")
-		public int logIn(@PathVariable String name, @PathVariable String mdp) {
-			int id = authService.login(name,mdp);
+		@RequestMapping("/connect")
+		public int logIn(@RequestBody LoginDTO dto) {
+			int id = authService.login(dto.getName(), dto.getmdp());
 			return id;
 		}
 }
