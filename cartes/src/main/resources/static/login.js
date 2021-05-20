@@ -31,6 +31,7 @@ function fire_ajax_submit() {
             $('#feedback').html(json);
 
             console.log("SUCCESS : ", data);
+			//window.location.href = "connected.html";
             $("#sign").prop("disabled", false);
 
         },

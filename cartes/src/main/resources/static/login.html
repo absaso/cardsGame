@@ -3,6 +3,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Log in</title>
+
+<script>
+    function pageRedirect() {
+      window.location.href = "connected.html";
+    }      
+</script> 
 </head>
 <body>
 	<div class = "feedback"></div>
@@ -12,7 +18,9 @@
       	<legend>Log</legend>
         Name <input type="text" name="name" id ="name" /> <br />
         Password <input type="text" name="password"  id ="mdp"/> <br /> 
-        <input type="submit" value="Login" id = "login" />
+       <button type="submit"  value="Login" id = "login" onclick="pageRedirect()"> Log In </button>
+        <!--  <input type="submit" value="Login" id = "login" />-->
+
        </fieldset>  
        <a class="Register" href = "Register.html" >Create a new account</a> 
     </form>
